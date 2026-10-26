@@ -1,0 +1,189 @@
+/* style.css: ONE stylesheet linked to every page */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #222222;
+  background-color: #FFFFFF;
+  line-height: 1.5;
+}
+
+/* Grouping selector: one rule for several elements */
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+header, footer {
+  background-color: #B71C1C; /* Tunisian flag red */
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+header p {
+  margin: 5px 0 0 0;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+
+footer {
+  clear: both;
+}
+
+/* Navigation bar built from a list */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+nav li {
+  float: left;
+}
+
+/* Descendant selector: links inside nav list items */
+nav li a {
+  display: block;
+  padding: 14px 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #F2A900;
+  color: #000000;
+}
+
+/* Marks the page you are currently on */
+nav li a.active {
+  background-color: #B71C1C;
+}
+
+/* Cards used on Home, Places and Food pages */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  flex: 1 1 250px;
+  border: 2px solid #DDDDDD;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #FAFAFA;
+  transition: transform 0.2s;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #B71C1C;
+}
+
+/* Used by the mouse-over JavaScript */
+.card.highlight {
+  border-color: #F2A900;
+  transform: scale(1.03);
+}
+
+.tag {
+  display: inline-block;
+  background-color: #1F3864;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Filter buttons */
+.filters button {
+  padding: 8px 16px;
+  margin: 0 6px 12px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #1F3864;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #F2A900;
+  color: #000000;
+}
+
+/* Card photos: fill the card width, same height, cropped neatly */
+.photo {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: #E0D6C2;
+  margin-bottom: 10px;
+}
+
+/* Flag logo in the header */
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 8px;
+  border: 1px solid #FFFFFF;
+}
+
+/* Form layout: each label and box on its own line */
+label, input, select, textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  display: inline;
+}
+
+label.inline {
+  display: inline;
+  margin-right: 12px;
+}
+
+input[type="text"], input[type="email"], input[type="number"], select, textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button[type="submit"], #calcButton, main button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #B71C1C;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+#formError {
+  color: #C62828;
+  font-weight: bold;
+}
+
+#costResult {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1F3864;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  main {
+    width: 92%;
+  }
+
+  nav li {
+    float: none;
+  }
+}
