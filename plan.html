@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- File: plan.html | Plan a Trip page: form with validation and a trip cost calculator | Author: Mohamed Ali Gharbi -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mohamed Ali Gharbi">
+  <title>Plan a Trip | Tunisia Travel Guide</title>
+  <link rel="icon" href="images/tunisia-flag.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header: flag logo, site title and tagline (same on every page) -->
+  <header>
+    <h1><img class="logo" src="images/tunisia-flag.svg" alt="Tunisian flag logo"> Tunisia Travel Guide</h1>
+    <p>Beaches, history, food and desert</p>
+  </header>
+  <!-- Navigation bar: a list of links to all 4 pages (same on every page) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="food.html">Food &amp; Culture</a></li>
+      <li><a href="plan.html" class="active">Plan a Trip</a></li>
+    </ul>
+  </nav>
+  <!-- Main content: this part is different on each page -->
+  <main>
+    <section id="plan">
+      <h2>Plan Your Trip</h2>
+      <p>Fill in the form, then press Calculate to see a rough cost. Prices are estimates in Tunisian dinar (TND) and not real quotes.</p>
+
+      <!-- Form: validateForm() checks the inputs when Send request is pressed -->
+      <form id="tripForm" onsubmit="return validateForm()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="days">Number of days (1 to 30)</label>
+        <input type="number" id="days" name="days" value="7">
+
+        <label for="budget">Budget level</label>
+        <select id="budget" name="budget">
+          <option value="90">Budget (90 TND per day)</option>
+          <option value="180" selected>Mid-range (180 TND per day)</option>
+          <option value="350">Comfort (350 TND per day)</option>
+        </select>
+
+        <p>Activities</p>
+        <label class="inline"><input type="checkbox" name="activity" value="40"> Camel ride (40 TND)</label>
+        <label class="inline"><input type="checkbox" name="activity" value="30"> Museum and ruins (30 TND)</label>
+        <label class="inline"><input type="checkbox" name="activity" value="60"> Boat trip (60 TND)</label>
+
+        <label for="msg">Message (optional)</label>
+        <textarea id="msg" name="msg" rows="4"></textarea>
+
+        <button type="button" id="calcButton" onclick="calculateCost()">Calculate cost</button>
+        <button type="submit">Send request</button>
+      </form>
+
+      <p id="costResult"></p>
+      <p id="formError"></p>
+    </section>
+  </main>
+  <!-- Footer: copyright line (same on every page) -->
+  <footer>
+    <p>&copy; 2026 Mohamed Ali | Heriot-Watt University Dubai</p>
+  </footer>
+  <!-- JavaScript: all the functions are in js/script.js -->
+  <script src="js/script.js"></script>
+</body>
+</html>

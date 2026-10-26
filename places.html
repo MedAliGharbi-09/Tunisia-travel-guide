@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- File: places.html | Places page: filter buttons (JavaScript) and 8 place cards | Author: Mohamed Ali Gharbi -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mohamed Ali Gharbi">
+  <title>Places | Tunisia Travel Guide</title>
+  <link rel="icon" href="images/tunisia-flag.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header: flag logo, site title and tagline (same on every page) -->
+  <header>
+    <h1><img class="logo" src="images/tunisia-flag.svg" alt="Tunisian flag logo"> Tunisia Travel Guide</h1>
+    <p>Beaches, history, food and desert</p>
+  </header>
+  <!-- Navigation bar: a list of links to all 4 pages (same on every page) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="places.html" class="active">Places</a></li>
+      <li><a href="food.html">Food &amp; Culture</a></li>
+      <li><a href="plan.html">Plan a Trip</a></li>
+    </ul>
+  </nav>
+  <!-- Main content: this part is different on each page -->
+  <main>
+    <section id="places">
+      <h2>Places to Visit</h2>
+      <p>Click a button to filter the places by type. Move your mouse over a card to highlight it.</p>
+
+      <!-- Filter buttons: each one calls filterPlaces() with a type -->
+      <div class="filters" id="filterButtons">
+        <button onclick="filterPlaces('all')">All</button>
+        <button onclick="filterPlaces('beach')">Beach</button>
+        <button onclick="filterPlaces('history')">History</button>
+        <button onclick="filterPlaces('desert')">Desert</button>
+      </div>
+
+      <!-- Place cards: data-type tells the filter which group each card is in -->
+      <div class="cards" id="placeList">
+        <article class="card" data-type="beach" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/hammamet.jpg" alt="Hammamet">
+          <h3>Hammamet</h3>
+          <span class="tag">Beach</span>
+          <p>A relaxed resort town with a walled old medina right next to the sea.</p>
+        </article>
+        <article class="card" data-type="beach" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/nabeul.jpg" alt="Nabeul">
+          <h3>Nabeul</h3>
+          <span class="tag">Beach</span>
+          <p>Known for its pottery and Friday market, with a long beach close by.</p>
+        </article>
+        <article class="card" data-type="beach" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/djerba.jpg" alt="Djerba">
+          <h3>Djerba</h3>
+          <span class="tag">Beach</span>
+          <p>A large island in the south with calm water, olive groves and traditional villages.</p>
+        </article>
+        <article class="card" data-type="history" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/carthage.jpg" alt="Carthage ruins">
+          <h3>Carthage</h3>
+          <span class="tag">History</span>
+          <p>The ruins of the ancient city that once rivalled Rome, just outside Tunis.</p>
+        </article>
+        <article class="card" data-type="history" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/el-djem.jpg" alt="El Djem amphitheatre">
+          <h3>El Djem</h3>
+          <span class="tag">History</span>
+          <p>A huge Roman amphitheatre that is one of the best preserved in the world.</p>
+        </article>
+        <article class="card" data-type="history" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/sidi-bou-said.jpg" alt="Sidi Bou Said">
+          <h3>Sidi Bou Said</h3>
+          <span class="tag">History</span>
+          <p>A hilltop village with blue and white houses and views over the bay.</p>
+        </article>
+        <article class="card" data-type="desert" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/douz.jpg" alt="Douz and the Sahara">
+          <h3>Douz</h3>
+          <span class="tag">Desert</span>
+          <p>The gateway to the Sahara, with camel rides and dune views.</p>
+        </article>
+        <article class="card" data-type="desert" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/tozeur.jpg" alt="Tozeur oasis">
+          <h3>Tozeur</h3>
+          <span class="tag">Desert</span>
+          <p>A palm oasis town with brick architecture, near salt lakes and film locations.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Footer: copyright line (same on every page) -->
+  <footer>
+    <p>&copy; 2026 Mohamed Ali | Heriot-Watt University Dubai</p>
+  </footer>
+  <!-- JavaScript: all the functions are in js/script.js -->
+  <script src="js/script.js"></script>
+</body>
+</html>

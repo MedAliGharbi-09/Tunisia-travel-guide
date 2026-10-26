@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- File: index.html | Home page: welcome text, a button that runs JavaScript, and 3 highlight cards | Author: Mohamed Ali Gharbi -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mohamed Ali Gharbi">
+  <title>Home | Tunisia Travel Guide</title>
+  <link rel="icon" href="images/tunisia-flag.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header: flag logo, site title and tagline (same on every page) -->
+  <header>
+    <h1><img class="logo" src="images/tunisia-flag.svg" alt="Tunisian flag logo"> Tunisia Travel Guide</h1>
+    <p>Beaches, history, food and desert</p>
+  </header>
+  <!-- Navigation bar: a list of links to all 4 pages (same on every page) -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="food.html">Food &amp; Culture</a></li>
+      <li><a href="plan.html">Plan a Trip</a></li>
+    </ul>
+  </nav>
+  <!-- Main content: this part is different on each page -->
+  <main>
+    <section id="welcome">
+      <h2>Welcome</h2>
+      <p>Tunisia sits on the Mediterranean coast of North Africa. In one trip you can swim at white sand beaches, walk through ancient Roman ruins and ride a camel into the Sahara. This guide covers the best places, the food and how to plan your trip.</p>
+      <button onclick="showMessage()">Find out more</button>
+      <p id="message"></p>
+    </section>
+
+    <section id="highlights">
+      <h2>Highlights</h2>
+      <div class="cards">
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/beach.jpg" alt="Tunisian beach">
+          <h3>Beaches</h3>
+          <p>Hammamet, Nabeul and Djerba have warm water and long sandy beaches.</p>
+          <a href="places.html">See places</a>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/food.jpg" alt="Tunisian food">
+          <h3>Food</h3>
+          <p>Try brik, couscous and lablabi, plus the famous Tunisian spicy harissa.</p>
+          <a href="food.html">See food</a>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/culture.jpg" alt="Tunisian culture">
+          <h3>Culture</h3>
+          <p>Nabeul pottery, Hammamet jasmine and the blue and white streets of Sidi Bou Said.</p>
+          <a href="food.html">See culture</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Footer: copyright line (same on every page) -->
+  <footer>
+    <p>&copy; 2026 Mohamed Ali | Heriot-Watt University Dubai</p>
+  </footer>
+  <!-- JavaScript: all the functions are in js/script.js -->
+  <script src="js/script.js"></script>
+</body>
+</html>

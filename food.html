@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- File: food.html | Food and Culture page: 4 food cards and 3 culture cards | Author: Mohamed Ali Gharbi -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Mohamed Ali Gharbi">
+  <title>Food &amp; Culture | Tunisia Travel Guide</title>
+  <link rel="icon" href="images/tunisia-flag.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header: flag logo, site title and tagline (same on every page) -->
+  <header>
+    <h1><img class="logo" src="images/tunisia-flag.svg" alt="Tunisian flag logo"> Tunisia Travel Guide</h1>
+    <p>Beaches, history, food and desert</p>
+  </header>
+  <!-- Navigation bar: a list of links to all 4 pages (same on every page) -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="places.html">Places</a></li>
+      <li><a href="food.html" class="active">Food &amp; Culture</a></li>
+      <li><a href="plan.html">Plan a Trip</a></li>
+    </ul>
+  </nav>
+  <!-- Main content: this part is different on each page -->
+  <main>
+    <section id="food">
+      <h2>Food to Try</h2>
+      <div class="cards">
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/brik.jpg" alt="Brik">
+          <h3>Brik</h3>
+          <p>A thin fried pastry filled with egg, tuna and parsley. Eat it hot.</p>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/couscous.jpg" alt="Couscous">
+          <h3>Couscous</h3>
+          <p>Steamed semolina served with vegetables and lamb, fish or chicken.</p>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/lablabi.jpg" alt="Lablabi">
+          <h3>Lablabi</h3>
+          <p>A chickpea soup with bread, cumin, olive oil and harissa. A popular breakfast.</p>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <img class="photo" src="images/ojja.jpg" alt="Ojja">
+          <h3>Ojja</h3>
+          <p>Eggs cooked in a spicy tomato and pepper sauce, often with merguez sausage.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="culture">
+      <h2>Culture</h2>
+      <div class="cards">
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <h3>Nabeul pottery</h3>
+          <p>Nabeul is the pottery capital of Tunisia. Workshops sell hand painted plates, bowls and tiles.</p>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <h3>Jasmine</h3>
+          <p>Jasmine is the national flower. In Hammamet, sellers offer small bunches of jasmine to visitors.</p>
+        </article>
+        <article class="card" onmouseover="highlight(this)" onmouseout="unhighlight(this)">
+          <h3>Souks</h3>
+          <p>Covered markets sell spices, leather, carpets and gifts. Bargaining is normal.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <!-- Footer: copyright line (same on every page) -->
+  <footer>
+    <p>&copy; 2026 Mohamed Ali | Heriot-Watt University Dubai</p>
+  </footer>
+  <!-- JavaScript: all the functions are in js/script.js -->
+  <script src="js/script.js"></script>
+</body>
+</html>
